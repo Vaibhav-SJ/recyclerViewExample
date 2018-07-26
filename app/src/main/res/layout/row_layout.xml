@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="horizontal"
     android:layout_margin="10dp"
     android:layout_width="match_parent"
@@ -9,14 +10,16 @@
         android:weightSum="1"
         android:layout_width="match_parent"
         android:orientation="horizontal"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        tools:ignore="UselessParent">
 
         <ImageView
             android:layout_weight="0.5"
             android:src="@drawable/pic1"
             android:layout_width="0dp"
             android:layout_height="100dp"
-            android:id="@+id/img_android"/>
+            android:id="@+id/img_android"
+            tools:ignore="ContentDescription" />
 
         <TextView
             android:layout_weight="0.5"
@@ -25,7 +28,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:textColor="#000"
-            android:id="@+id/tv_android"/>
+            android:id="@+id/tv_android"
+            tools:ignore="HardcodedText" />
 
     </LinearLayout>
 </LinearLayout>

@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity
 
     private void initViews()
     {
-        RecyclerView recyclerView = (RecyclerView)findViewById(R.id.card_recycler_view);
+        RecyclerView recyclerView = findViewById(R.id.card_recycler_view);
         recyclerView.setHasFixedSize(true);
         /*RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getApplicationContext(),2);
         recyclerView.setLayoutManager(layoutManager);*/
@@ -38,8 +38,7 @@ public class MainActivity extends AppCompatActivity
     public List<Data> fill_with_data()
     {
 
-        List<Data> data = new ArrayList<>();
-
+        data = new ArrayList<>();
         data.add(new Data( R.drawable.pic2, "Image 1"));
         data.add(new Data( R.drawable.pic1, "Image 2"));
         data.add(new Data( R.drawable.pic2, "Image 3"));
@@ -49,15 +48,13 @@ public class MainActivity extends AppCompatActivity
         data.add(new Data( R.drawable.pic1, "Image 7"));
         data.add(new Data( R.drawable.pic3, "Image 8"));
         data.add(new Data( R.drawable.pic2, "Image 9"));
-
-
         return data;
     }
 
-    public class Data
+    class Data
     {
-        public int imageId;
-        public String txt;
+        int imageId;
+        String txt;
 
         Data( int imageId, String text)
         {
